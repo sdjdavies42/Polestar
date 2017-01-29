@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<%= javascript_include_tag :defaults %>
+<html>
+	<head>
+		<title>Polestar</title>
+		<%= csrf_meta_tags %>
+		<%= stylesheet_link_tag  "application" %>
+		<link href="//fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet">
+		<%= favicon_link_tag 'favicon.ico' %>
+		<div class="page-header">
+			<div class="container">
+				<h1 id="main-header"><i class="fa fa-star-half-o"></i>Polestar <small>Overseas Military Car-Finder</small></h1>
+				<h4 id="slogan">Guiding you to your next vehicle purchase.</h4>
+			</div>
+			<nav class="navbar navbar-default navbar-static-top" role="navigation">
+				<div class='container'>
+					<div class="navbar-header">
+
+					</div>
+					
+						<ul class="nav navbar-nav navbar-left">
+							<li><%= link_to "Home", root_path %></li>
+						</ul>
+
+						<ul class="nav navbar-nav">
+							<li><%= link_to "Contact Us", new_contact_path %></li>
+						</ul>
+
+						<ul class="nav navbar-nav">
+							<li><%= link_to "About", about_path %></li>
+						</ul>
+
+						<ul class="nav navbar-nav navbar-right">
+							<% if user_signed_in? %>
+								<%= link_to "Log Out", destroy_user_session_path, :method => :delete, class: 'btn btn-default navbar-btn' %>
+							<% else %>
+								<%= link_to "Log In", new_user_session_path, class: 'btn btn-default navbar-btn' %>
+							<% end %>
+						</ul>
+
+					</div>
+				</div>
+			</nav>
+		</div>
+	</head>
+
+	<body id="home-background">
+		<div class="container">
+			<% flash.each do |type, msg| %>
+	  		<%= content_tag :div, msg, class: "alert alert-#{type}" %>
+			<% end %>
+		</div>
+
+		<%= yield %>
+		
+	</body>
+</html>

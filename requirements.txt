@@ -1,0 +1,23 @@
+Homepage
+
+* Navbar with links to contact info, about page and log in button.
+* Create Account button for dealers.
+* View Inventory button for customers.
+
+Contact page
+
+* Contact form wired up to email site owner
+* Name, phone number, email address and comment fields. Drop-down asking if form
+	submitted by dealer or shopper.
+* Email address field should validate for @ and . symbols.
+* Flash message for successful submit, or list errors if not.
+
+Inventory page
+
+* Search bar to allow filtering by make/body style/location.
+* Thumbnail links of all vehicles listed.
+
+Create Account page
+
+* Sign up form.
+* Stripe payment processing fields.

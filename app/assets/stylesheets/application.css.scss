@@ -1,0 +1,65 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+body {
+	background-color: rgb(225, 229, 237);
+}
+
+h1, h2, h3, h4 {
+	font-family: 'Ubuntu', sans-serif;
+}
+
+#main-header {
+	color: white;
+}
+#slogan {
+	color: white;
+}
+
+.page-header, .navbar {
+	color: white;
+	border: none;
+	text-align: center;
+	background: #485563; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #485563 , #29323c); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #485563 , #29323c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+}
+
+.page-header {
+	margin: -10px;
+	padding-bottom: 0;
+}
+
+.navbar-default .navbar-brand, .navbar-default .navbar-nav > li > a, {
+	font-size: 150%;
+	font-family: 'Ubuntu', sans-serif;
+	color: white;
+	&:hover {
+		color: white;
+		opacity: 0.4;
+	}
+}
+
+.btn-default {
+	background-color: teal;
+}
+
+
+.navbar {
+	margin-bottom: none;
+}
+
+#home-background {
+	background: url('/cars.jpg') no-repeat;
+	background-size: cover;
+}
+
+.well {
+	margin-top: 70px;
+	background-color: rgb(225, 229, 237);
+}
+
+
+
