@@ -17,6 +17,12 @@ gem 'devise', '4.2.0'
 # Use Hirb for better console presentation
 gem 'hirb', '0.7.3'
 
+# Use Stripe to process payments
+gem 'stripe', '1.48.0'
+
+# Use Figaro for ENV variables
+gem 'figaro', '1.1.1'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
 # Use sqlite3 as the database for Active Record
