@@ -52,6 +52,17 @@ h1, h2, h3, h4 {
 	border-bottom: 1px solid gray;
 }
 
+.flash-container {
+	position: absolute;
+	width: 100%;
+}
+
+.alert, .alert-alert {
+	text-align: center;
+	background-color: rgb(225, 229, 237);
+	border: 1px solid gray;
+}
+
 #home-background {
 	background: url('/cars.jpg') no-repeat;
 	background-size: cover;
