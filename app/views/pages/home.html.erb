@@ -1,12 +1,5 @@
 <div class="container">
 	<div class="row">		
-		<div class="well dealer-signup">
-			<h4 class="text-center">Are you a military car sales company? Create a Polestar Dealership Account to start listing your vehicles:
-				<%= link_to "Sign Up!", new_user_registration_path(plan: @dealer_plan), class: "btn btn-danger btn-ms" %></h4>
-		</div>
-		
-	</div>
-	<div class="row">		
 		<div class="well inventory-well">
 			<h2 class="text-center">Shopping for a new vehicle?</h2>
 			<h4 class="text-center">Follow the link below to see what's out there.<br /> It's free!</h4><br />
@@ -18,5 +11,12 @@
 				and countless individual dealership sites.</p><br />
 				<%= link_to "Go to Inventory", '#', class: "btn btn-success btn-lg btn-block" %>
 		</div>
+	</div>
+	<div class="row">		
+		<div class="well dealer-signup">
+			<h4 class="text-center">Are you a military car sales company? Create a Polestar Dealership Account to start listing your vehicles:
+				<%= link_to "Sign Up!", new_user_registration_path(plan: @dealer_plan), class: "btn btn-danger btn-ms" %></h4>
+		</div>		
 	</div>	
+	<%= link_to "Create your profile!", new_user_profile_path(user_id: current_user.id) if user_signed_in? %>
 </div>
