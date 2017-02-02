@@ -9,11 +9,6 @@
           <%= hidden_field_tag 'plan', params[:plan] %>
 
           <div class="field form-group">
-            <%= label_tag :name, "Company Name" %>
-            <%= text_field_tag :name, nil, name: nil, class: "form-control" %>
-          </div>
-
-          <div class="field form-group">
             <%= f.label :email %><br />
             <%= f.email_field :email, autofocus: true, class: 'form-control' %>
           </div>
@@ -32,7 +27,7 @@
           </div>
 
           <div class="field form-group">
-            <%= label_tag :card_name, "Name on Card" %>
+            <%= label_tag :card_name, "Name on card" %>
             <%= text_field_tag :card_name, nil, name: nil, class: "form-control" %>
           </div>
 
