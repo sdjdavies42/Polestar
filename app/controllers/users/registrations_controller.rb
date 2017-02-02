@@ -1,4 +1,6 @@
 class Users::RegistrationsController < Devise::RegistrationsController
+	before_action :select_plan, only: :new
+
 	def create
 		super do |resource| 
 			if params[:plan]
@@ -9,4 +11,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
 			end
 		end
 	end
+# Prevents user manipulating Plan ID no. in URL.
+	private
+		def select_plan
+			unless (params[:plan] == '1')
+				flash[:notice] = "Please select Dealership account to sign up."
+				redirect_to root_path
+			end
+		end
 end
