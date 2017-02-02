@@ -1,31 +1,22 @@
-<body id="home-background">
-	<div class="container homepage-wells">
-		<div class="row">
-			<div class="col-md-5 col-md-offset-1">
-				<div class="well homepage-boxes">
-					<h1 class="text-center">Dealers</h1>
-					<h4 class="text-center">Create a Polestar Dealership account to start listing your vehicles.</h4><br />
-					<p>Joining Polestar will allow you to start listing your vehicles on the site.</p>
-					<p>We're the go-to website for Military members overseas who are searching for 
-						their new vehicle, so make sure your stock doesn't go unseen. 
-						Sign up for Polestar today:</p><br />
-						<%= link_to "Sign Up", new_user_registration_path(plan: @dealer_plan), class: "btn btn-success btn-lg btn-block" %>
-				</div>
-			</div>
-
-			<div class="col-md-5">
-				<div class="well homepage-boxes">
-					<h2 class="text-center">Shopping for a new vehicle?</h2>
-					<h4 class="text-center">Follow the link below to see what's out there.<br /> It's free!</h4><br />
-					<p>Polestar exists to save you time and headaches during what can otherwise
-						be a stressful and time-consuming period. 
-						Polestar is a place where all overseas military car dealerships can 
-						list their vehicles in one easy-to-navigate site, so you don't have
-						to kick tires on lemon lots, or sift though endless 'yard sale' Facebook pages
-						and countless individual dealership sites.</p><br />
-						<%= link_to "Go to Inventory", '#', class: "btn btn-success btn-lg btn-block" %>
-				</div>
-			</div>
-		</div>	
+<div class="container">
+	<div class="row">		
+		<div class="well dealer-signup">
+			<h4 class="text-center">Are you a military car sales company? Create a Polestar Dealership Account to start listing your vehicles:
+				<%= link_to "Sign Up!", new_user_registration_path(plan: @dealer_plan), class: "btn btn-danger btn-ms" %></h4>
+		</div>
+		
 	</div>
-</body>
+	<div class="row">		
+		<div class="well inventory-well">
+			<h2 class="text-center">Shopping for a new vehicle?</h2>
+			<h4 class="text-center">Follow the link below to see what's out there.<br /> It's free!</h4><br />
+			<p>Polestar exists to save you time and headaches during what can otherwise
+				be a stressful and time-consuming period. 
+				Polestar is a place where all overseas military car dealerships can 
+				list their vehicles in one easy-to-navigate site, so you don't have
+				to kick tires on lemon lots, or sift though endless 'yard sale' Facebook pages
+				and countless individual dealership sites.</p><br />
+				<%= link_to "Go to Inventory", '#', class: "btn btn-success btn-lg btn-block" %>
+		</div>
+	</div>	
+</div>

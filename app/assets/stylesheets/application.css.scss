@@ -28,7 +28,7 @@ h1, h2, h3, h4 {
 }
 
 .page-header {
-	margin: -10px;
+	margin: -5px;
 	padding-bottom: 0;
 }
 
@@ -69,9 +69,15 @@ h1, h2, h3, h4 {
 }
 
 .well {
-	margin-top: 70px;
+	margin-top: 20px;
 	background-color: rgb(225, 229, 237);
 }
 
+.dealer-signup {
+	padding-top: 0;
+	padding-bottom: 0;
+}
 
-
+.inventory-well {
+	padding-top: 0px;
+}
