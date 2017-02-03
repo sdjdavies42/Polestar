@@ -58,8 +58,9 @@ p {
 }
 
 .flash-container {
-	position: absolute;
+	position: relative;
 	width: 100%;
+	font-style: black;
 }
 
 .alert, .alert-alert {
@@ -79,7 +80,7 @@ p {
 }
 
 .dealer-signup {
-	margin-top: 60px;
+	margin-top: 5px;
 	padding-top: 0;
 	padding-bottom: 0;
 }
