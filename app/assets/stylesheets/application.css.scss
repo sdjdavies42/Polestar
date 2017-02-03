@@ -11,6 +11,11 @@ h1, h2, h3, h4 {
 	font-family: 'Ubuntu', sans-serif;
 }
 
+p {
+	text-align: center;
+	font-weight: bold;
+}
+
 #main-header {
 	color: white;
 }
@@ -74,11 +79,12 @@ h1, h2, h3, h4 {
 }
 
 .dealer-signup {
+	margin-top: 60px;
 	padding-top: 0;
 	padding-bottom: 0;
 }
 
 .inventory-well {
-	margin-top: 60px;
-	padding-top: 0px;
+	margin-top: -5px;
+	padding-top: 0;
 }

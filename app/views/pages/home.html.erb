@@ -1,4 +1,12 @@
 <div class="container">
+	<% if !user_signed_in? %>
+		<div class="row">		
+			<div class="well dealer-signup">
+				<h4 class="text-center">Are you a military car sales company? Create a Polestar Dealership Account to start listing your vehicles:
+					<%= link_to "Sign Up!", new_user_registration_path(plan: @dealer_plan), class: "btn btn-danger btn-md" %></h4>
+			</div>		
+		</div>
+	<% end %>	
 	<div class="row">		
 		<div class="well inventory-well">
 			<h2 class="text-center">Shopping for a new vehicle?</h2>
@@ -12,12 +20,4 @@
 				<%= link_to "Go to Inventory", '#', class: "btn btn-success btn-lg btn-block" %>
 		</div>
 	</div>
-	<% if !user_signed_in? %>
-	<div class="row">		
-		<div class="well dealer-signup">
-			<h4 class="text-center">Are you a military car sales company? Create a Polestar Dealership Account to start listing your vehicles:
-				<%= link_to "Sign Up!", new_user_registration_path(plan: @dealer_plan), class: "btn btn-danger btn-ms" %></h4>
-		</div>		
-	</div>
-	<% end %>	
 </div>
