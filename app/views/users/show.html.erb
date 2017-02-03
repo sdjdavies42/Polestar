@@ -1,1 +1,14 @@
-<%= @user %>
+<div class="container homepage-wells">
+	<div class="row">		
+		<div class="well contact-form">
+
+			<%= @user.profile.company %>
+			<%= @user.profile.name %>
+			<%= @user.profile.location %>
+			<%= @user.profile.phone_number %>
+			<%= @user.profile.email %>
+			<%= @user.profile.about %>
+
+		</div>		
+	</div>	
+</div>
