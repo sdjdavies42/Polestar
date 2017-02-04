@@ -1,9 +1,9 @@
-<div class="container homepage-wells">
+<div class="container">
 	<div class="row">
 		<div class="col-md-3">
-			<div class="well">
+			<div class="well dealer-well">
 				<h2 class="text-center dealer-name"><%= @user.profile.company %></h2>
-				<%= image_tag @user.profile.avatar.url class: 'avatar-img' %>
+				<%= image_tag @user.profile.avatar.url, class: 'avatar-img' %>
 				<h4>Location</h4>
 				<div class="dealer-field">
 					<%= @user.profile.location %>
