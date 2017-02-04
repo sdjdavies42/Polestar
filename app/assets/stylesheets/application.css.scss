@@ -84,3 +84,22 @@ p {
 	margin-top: -5px;
 	padding-top: 0;
 }
+
+.avatar-img {
+	width: 128px;
+	height: 128px;
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dealer-name {
+	margin-top: -5px;
+}
+
+.dealer-field {
+	border-radius: 5px;
+	border: 1px solid #0099cc;
+	background-color: white;
+	text-align: center;
+}

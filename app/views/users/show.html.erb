@@ -1,14 +1,30 @@
 <div class="container homepage-wells">
-	<div class="row">		
-		<div class="well contact-form">
-			<%= image_tag @user.profile.avatar.url %>
-			<%= @user.profile.company %>
-			<%= @user.profile.name %>
-			<%= @user.profile.location %>
-			<%= @user.profile.phone_number %>
-			<%= @user.profile.email %>
-			<%= @user.profile.about %>
-
+	<div class="row">
+		<div class="col-md-3">
+			<div class="well">
+				<h2 class="text-center dealer-name"><%= @user.profile.company %></h2>
+				<%= image_tag @user.profile.avatar.url class: 'avatar-img' %>
+				<h4>Location</h4>
+				<div class="dealer-field">
+					<%= @user.profile.location %>
+				</div>
+				<h4>Sales Representative</h4>
+				<div class="dealer-field">
+					<%= @user.profile.name %>
+				</div>
+				<h4>Phone number</h4>
+				<div class="dealer-field">
+					<%= @user.profile.phone_number %>
+				</div>
+				<h4>Email address</h4>
+				<div class="dealer-field">
+					<%= @user.profile.email %>
+				</div>
+				<h4>About <%= @user.profile.company %></h4>
+				<div class="dealer-field">
+					<%= @user.profile.about %>
+				</div>
+			</div>
 		</div>		
 	</div>	
 </div>
