@@ -11,6 +11,7 @@ h1, h2, h3, h4 {
 	font-family: 'Ubuntu', sans-serif;
 }
 
+//Layout
 #main-header {
 	color: white;
 }
@@ -80,6 +81,7 @@ h1, h2, h3, h4 {
 	padding-top: 0;
 }
 
+//Profile page
 .avatar-img {
 	width: 128px;
 	height: 128px;
@@ -102,4 +104,16 @@ h1, h2, h3, h4 {
 	border: 1px solid #0099cc;
 	background-color: white;
 	text-align: center;
+}
+
+// User index page
+.user-index-avatar {
+	width: 128px;
+	height: 128px;
+	border: 1px solid gray;
+	border-radius: 50%;
+}
+
+.white-bg {
+	background-color: white;
 }
