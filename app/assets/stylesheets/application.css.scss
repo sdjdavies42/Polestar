@@ -4,11 +4,32 @@
 @import "font-awesome";
 
 body {
-	background-color: rgb(225, 229, 237);
+	
+	min-height: 100%;
 }
 
 h1, h2, h3, h4 {
 	font-family: 'Ubuntu', sans-serif;
+}
+
+footer {
+	margin-top: 10px;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	background-color: rgb(242, 242, 242);
+}
+
+.footer-left {
+	display: inline;
+	float: left;
+	padding-right: 10px;
+}
+
+.footer-right {
+	display: inline;
+	float: right;
+	padding-left: 10px;
 }
 
 //Layout
@@ -68,6 +89,7 @@ h1, h2, h3, h4 {
 .well {
 	margin-top: 20px;
 	background-color: rgb(225, 229, 237);
+	margin-bottom: 10px;
 }
 
 .dealer-signup {
