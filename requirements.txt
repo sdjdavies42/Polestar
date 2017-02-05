@@ -6,10 +6,10 @@ Homepage
 
 Contact page
 
-* Contact form wired up to email site owner
+* Contact form wired up to email site owner.
 * Name, phone number, email address and comment fields. Drop-down asking if form
 	submitted by dealer or shopper.
-* Email address field should validate for @ and . symbols.
+* Email address field should validate for @ symbol.
 * Flash message for successful submit, or list errors if not.
 
 Inventory page
@@ -21,3 +21,11 @@ Create Account page
 
 * Sign up form.
 * Stripe payment processing fields.
+
+Profile pages
+
+* Dealership name
+* Profile picture
+* Description field
+* Contact information
+* Vehicle upload fields

@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="well">
+        <h2 class="text-center">Create Your Dealership Page</h2>
+
+        <%= form_for @profile, url: user_profile_path, :html => { :multipart => true } do |f| %>
+
+          <div class="form-group">
+						<%= f.label :avatar %>
+						<%= f.file_field :avatar, class: 'form-control' %>
+					</div>
+
+        	<div class="form-group">
+						<%= f.label :company %>
+						<%= f.text_field :company, class: 'form-control' %>
+					</div>
+
+					 <div class="form-group">
+						<%= f.label :name %>
+						<%= f.text_field :name, class: 'form-control' %>
+					</div>
+
+					<div class="form-group">
+						<%= f.label :location %>
+						<%= f.select :location, ['Ansbach', 'Grafenwoehr', 'Hohenfels', 'Vilseck'], {}, class: 'form-control' %>
+					</div>
+
+					<div class="form-group">
+						<%= f.label :phone_number %>
+						<%= f.text_field :phone_number, class: 'form-control' %>
+					</div>
+
+					<div class="form-group">
+						<%= f.label :email %>
+						<%= f.text_field :email, class: 'form-control' %>
+					</div>
+
+					<div class="form-group">
+						<%= f.label :about %>
+						<%= f.text_area :about, class: 'form-control' %>
+					</div>
+
+					<div class="form-group">
+    				<%= f.submit "Create Profile", class: 'btn btn-primary' %>
+  				</div>
+
+				<% end %>
+
+      </div>
+    </div>
+  </div>
+</div>

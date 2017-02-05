@@ -1,23 +1,23 @@
 <div class="container">
-	<div class="row">		
-		<div class="well dealer-signup">
-			<h4 class="text-center">Are you a military car sales company? Create a Polestar Dealership Account to start listing your vehicles:
-				<%= link_to "Sign Up!", new_user_registration_path(plan: @dealer_plan), class: "btn btn-danger btn-ms" %></h4>
+	<% if !user_signed_in? %>
+		<div class="row">		
+			<div class="well dealer-signup">
+				<h4 class="text-center">Do you own/work at a military car sales company? Create a Polestar Dealership Account to start listing your vehicles: 
+					<%= link_to "Sign Up!", new_user_registration_path(plan: @dealer_plan), class: "btn btn-danger btn-md" %></h4>
+			</div>		
 		</div>
-		
-	</div>
+	<% end %>	
 	<div class="row">		
 		<div class="well inventory-well">
 			<h2 class="text-center">Shopping for a new vehicle?</h2>
-			<h4 class="text-center">Follow the link below to see what's out there.<br /> It's free!</h4><br />
-			<p>Polestar exists to save you time and headaches during what can otherwise
-				be a stressful and time-consuming period. 
-				Polestar is a place where all overseas military car dealerships can 
-				list their vehicles in one easy-to-navigate site, so you don't have
-				to kick tires on lemon lots, or sift though endless 'yard sale' Facebook pages
-				and countless individual dealership sites.</p><br />
-				<%= link_to "Go to Inventory", '#', class: "btn btn-success btn-lg btn-block" %>
+			<p>Polestar exists to make your life easier. All overseas military car dealerships can 
+				list their vehicles on one easy-to-navigate site, so you'll no longer have
+				to kick tires on lemon lots, sift though endless Facebook pages
+				and search countless individual dealership sites.</p>
+			<h4 class="text-center">Follow the link below to see what's out there. It's free!</h4>
+			<%= link_to "View All Vehicles", '#', class: "btn btn-success btn-lg btn-block" %>
 		</div>
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 	</div>	
 =======
@@ -31,4 +31,7 @@
 	</div>
 	<% end %>	
 >>>>>>> Stashed changes
+=======
+	</div>
+>>>>>>> Profiles
 </div>

@@ -3,10 +3,11 @@
     <div class="col-md-8 col-md-offset-2">
       <div class="well">
         <h2 class="text-center">Sign up</h2>
-        <p>Joining Polestar will allow you to start listing your vehicles on the site.</p>
+        <h4 class="text-center">Create a Polestar account to begin listing your vehicles on the site.</h4>
+        <p>Polestar costs only $50 per month. Your subscription will allow you an unlimited amount of listings. You'll even get a free 30-day trail period when you sign up!</p>
         <p>We're the go-to website for Military members overseas who are searching for 
-        their new vehicle, so make sure your stock doesn't go unseen. 
-        Sign up for Polestar today:</p>
+        their new vehicle, so make sure your stock doesn't go unseen: 
+        Sign up for Polestar today!</p>
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {id: 'dealer_form'} ) do |f| %>
           <%= devise_error_messages! %>
 
@@ -29,7 +30,7 @@
             <%= f.label :password_confirmation %><br />
             <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
           </div>
-
+          <h3>Subscription <small>Powered by Stripe</small></h3>
           <div class="field form-group">
             <%= label_tag :card_name, "Name on card" %>
             <%= text_field_tag :card_name, nil, name: nil, class: "form-control" %>

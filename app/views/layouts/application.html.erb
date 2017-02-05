@@ -18,14 +18,16 @@
 			<h4 id="slogan">Guiding you to your next vehicle purchase.</h4>
 		</div>
 		<nav class="navbar navbar-default navbar-static-top" role="navigation">
-		<div class='container'>
+			<div class='container'>
 
-			<ul class="nav navbar-nav navbar-left">
-				<li><%= link_to "Home", root_path %></li>	
-				<li><%= link_to "Contact Us", new_contact_path %></li>
-				<li><%= link_to "About", about_path %></li>
-			</ul>
+				<ul class="nav navbar-nav navbar-left">
+					<li><%= link_to "Home", root_path %></li>
+					<li><%= link_to "Dealerships", users_path %></li>
+					<li><%= link_to "Contact Us", new_contact_path %></li>
+					<li><%= link_to "About", about_path %></li>
+				</ul>
 
+<<<<<<< HEAD
 			<ul class="nav navbar-nav navbar-right">
 
 				<% if user_signed_in? %>
@@ -38,6 +40,28 @@
 					<%= link_to "Log In", new_user_session_path, class: 'btn btn-md btn-success navbar-btn' %>
 				<% end %>
 			</ul>
+=======
+				<ul class="nav navbar-nav navbar-right">
+					<% if user_signed_in? %>
+						<% if current_user.profile %>
+							<li><%= link_to "Your Page", user_path(id: current_user.id) %></li>
+							<li><%= link_to "Update Your Page", edit_user_profile_path(user_id: current_user.id) %></li>
+						<% end %>
+						<% if !current_user.profile %>
+							<%= link_to "Create Your Dealership Page", new_user_profile_path(user_id: current_user.id), class: 'btn btn-md btn-success navbar-btn' %>
+							<% end %>
+						<% end %>
+
+					<% if user_signed_in? %>
+						<li><%= link_to "Your Account", edit_user_registration_path %></li>
+						<%= link_to "Log Out", destroy_user_session_path, :method => :delete, class: 'btn btn-md btn-danger navbar-btn' %>
+					<% else %>
+						<%= link_to "Log In", new_user_session_path, class: 'btn btn-md btn-success navbar-btn' %>
+					<% end %>
+				</ul>
+				
+			</div>
+>>>>>>> Profiles
 		</nav>
 	</div>
 
@@ -50,6 +74,18 @@
 		</div>
 
 		<%= yield %>
+
 		
+		<footer>
+			<div class="container class-"text-center"">
+				<ul>
+					<li class="footer-left"><%= link_to "Home", root_path %></li>
+					<li class="footer-left"><%= link_to "Contact Us", new_contact_path %></li>
+					<li class="footer-left"><%= link_to "About", about_path %></li>
+					<li class="footer-right"><a href="#">Find us on Facebook <i class="fa fa-facebook-official"></i></a></li>
+					<li class="footer-right"><a href="#">Follow us on Twitter <i class="fa fa-twitter"></i></a></li>
+				</ul>
+			</div>
+		</footer>
 	</body>
 </html>
