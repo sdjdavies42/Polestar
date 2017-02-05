@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20170203214010) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "contacts", force: :cascade do |t|
     t.string   "name"
     t.string   "phone"
@@ -59,8 +62,8 @@ ActiveRecord::Schema.define(version: 20170203214010) do
     t.datetime "updated_at",                          null: false
     t.integer  "plan_id"
     t.string   "stripe_customer_token"
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
 end
