@@ -1,20 +1,19 @@
-<div class="container homepage-wells">
-	<div class="row">
-		<div class="col-md-6 col-md-offset-3">
-			<div class="well">
-				<h1 class="text-center">Contact Us</h1>
-					<%= form_for @contact do |f| %>
-						<%= f.label :name %>
-						<%= f.text_field :name, class: 'form-control' %>
-						<%= f.label :email %>
-						<%= f.text_field :email, class: 'form-control' %>
-						<%= f.label :phone %>
-						<%= f.text_field :phone, class: 'form-control' %>
-						<%= f.label :message %>
-						<%= f.text_area :message, class: 'form-control' %>
-						<%= f.submit 'Submit', class: 'btn btn-success btn-block' %>
-					<% end %>
-			</div>
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+		<div class="well">
+			<h1 class="text-center">Contact Us</h1>
+				<%= form_for @contact do |f| %>
+					<%= f.label :name %>
+					<%= f.text_field :name, class: 'form-control' %>
+					<%= f.label :email %>
+					<%= f.text_field :email, class: 'form-control' %>
+					<%= f.label :phone %>
+					<%= f.text_field :phone, class: 'form-control' %>
+					<%= f.label :message %>
+					<%= f.text_area :message, class: 'form-control' %>
+					<%= f.submit 'Submit', class: 'btn btn-success btn-block' %>
+				<% end %>
 		</div>
-	</div>	
-</div>
+	</div>
+</div>	
+

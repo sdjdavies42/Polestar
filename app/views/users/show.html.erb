@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-3">
-				<div class="well dealer-well">
+				<div class="well">
 					<%= link_to "Add Listing", new_user_car_path(user_id: current_user.id ) %>
 				</div>
 			</div>
@@ -13,7 +13,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-3">
-			<div class="well dealer-well">
+			<div class="well">
 				<h2 class="text-center dealer-name"><%= @user.profile.company %></h2>
 				<%= image_tag @user.profile.avatar.url, class: 'avatar-img' %>
 				<h4>Location</h4>
@@ -40,5 +40,3 @@
 		</div>
 	</div>	
 </div>
-<br />
-<br />
