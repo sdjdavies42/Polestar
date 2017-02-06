@@ -3,6 +3,7 @@
 <html>
 	<head>
 		<title>Polestar</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<%= csrf_meta_tags %>
 		<%= stylesheet_link_tag  "application" %>
 		<link href="//fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet">
@@ -11,7 +12,7 @@
 		<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 		<%= tag :meta, :name => "stripe-key", :content => STRIPE_PUBLIC_KEY %>
 	</head>
-
+<body id="home-background">
 	<div class="page-header">
 		<div class="container">
 			<h1 id="main-header"><i class="fa fa-star-half-o"></i>Polestar <small>Overseas Military Car-Finder</small></h1>
@@ -50,27 +51,24 @@
 		</nav>
 	</div>
 
-	<body id="home-background">
-		
-		<div class="container flash-container">
-			<% flash.each do |type, msg| %>
-	  		<%= content_tag :div, msg, class: "alert alert-#{type}" %>
-			<% end %>
+	<div class="container flash-container">
+		<% flash.each do |type, msg| %>
+  		<%= content_tag :div, msg, class: "alert alert-#{type}" %>
+		<% end %>
+	</div>
+
+	<%= yield %>
+
+	<footer>
+		<div class="container">
+			<ul>
+				<li class="footer-left"><%= link_to "Home", root_path %></li>
+				<li class="footer-left"><%= link_to "Contact Us", new_contact_path %></li>
+				<li class="footer-left"><%= link_to "About", about_path %></li>
+				<li class="footer-right"><a href="#">Find us on Facebook <i class="fa fa-facebook-official"></i></a></li>
+				<li class="footer-right"><a href="#">Follow us on Twitter <i class="fa fa-twitter"></i></a></li>
+			</ul>
 		</div>
-
-		<%= yield %>
-
-		
-		<footer>
-			<div class="container class-"text-center"">
-				<ul>
-					<li class="footer-left"><%= link_to "Home", root_path %></li>
-					<li class="footer-left"><%= link_to "Contact Us", new_contact_path %></li>
-					<li class="footer-left"><%= link_to "About", about_path %></li>
-					<li class="footer-right"><a href="#">Find us on Facebook <i class="fa fa-facebook-official"></i></a></li>
-					<li class="footer-right"><a href="#">Follow us on Twitter <i class="fa fa-twitter"></i></a></li>
-				</ul>
-			</div>
-		</footer>
-	</body>
+	</footer>
+</body>	
 </html>
