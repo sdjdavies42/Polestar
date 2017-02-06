@@ -20,7 +20,6 @@
 		</div>
 		<nav class="navbar navbar-default navbar-static-top" role="navigation">
 			<div class='container'>
-
 				<ul class="nav navbar-nav navbar-left">
 					<li><%= link_to "Home", root_path %></li>
 					<li><%= link_to "Dealerships", users_path %></li>
@@ -30,6 +29,7 @@
 
 				<ul class="nav navbar-nav navbar-right">
 					<% if user_signed_in? %>
+
 						<% if current_user.profile %>
 							<li><%= link_to "Your Page", user_path(id: current_user.id) %></li>
 							<li><%= link_to "Update Your Page", edit_user_profile_path(user_id: current_user.id) %></li>
