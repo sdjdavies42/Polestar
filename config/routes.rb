@@ -12,9 +12,7 @@ Rails.application.routes.draw do
 
 	resources :users do
 		resource :profile
-	end
-	resources :users do
 		resources :cars
 	end
-	
+		
 end

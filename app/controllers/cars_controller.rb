@@ -1,19 +1,26 @@
 class CarsController < ApplicationController
+	respond_to :html, :xml, :json
 
 	# GET request to /users/:user_id/cars/new
 	def new
-		@car = Car.new
+		@user = User.find( params[:user_id] )
+		@car = @user.cars.build
+		respond_with(@car)
 	end
 
 	# POST request to /users/:user_id/cars
 	def create
-		# Finds user who is filling out form
 		@user = User.find( params[:user_id] )
-		# Create car linked to this specific user
-		@car = @user.build_car( car_params )
-		if @car.save 
-			redirect_to user_profile_path
+		@car = @user.cars.build( car_params )
+		if @car.save
+			redirect_to root_path
 		end
+	end
+
+	#GET request to /users/:user_id/cars/:id
+	def show
+		@user = User.find( params[:user_id]	)
+		@car = @user.cars.find( params[:id] )
 	end
 
 	private

@@ -4,7 +4,7 @@
       <div class="well">
         <h2 class="text-center">Add New Listing</h2>
 
-        <%= form_for [@user, @car], url: user_car_path(id: :user_id) do |f| %>
+        <%= form_for @car, url: user_cars_path do |f| %>
 
         	<div class="form-group">
 						<%= f.label :category %>
