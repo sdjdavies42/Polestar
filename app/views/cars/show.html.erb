@@ -1,1 +1,41 @@
-<%= @car.inspect %>
+<div class="container">
+	<div class="row">
+		<div class="col-md-3">
+			<div class="well">
+				<h4>Bodystyle</h4>
+				<div class="dealer-field">
+					<%= @car.category %>
+				</div>
+				<h4>Transmission</h4>
+				<div class="dealer-field">
+					<%= @car.transmission %>
+				</div>
+				<h4>Mileage</h4>
+				<div class="dealer-field">
+					<%= @car.miles %>
+				</div>
+				<h4>Description</h4>
+				<div class="dealer-field">
+					<%= @car.description %>
+				</div>
+			</div>	
+		</div>
+		<div class="col-md-6">
+			<div class="well car-title">
+				<h1 class="text-center"><%= @car.year %> <%= @car.make %> <%= @car.model%></h1>
+				<h3 class="text-center"><%= @car.price %></h3>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="well text-center">
+				<%= link_to @user do %>				
+					<%= image_tag @user.profile.avatar.url, class: 'user-index-avatar' %>
+				<% end %>
+				<h3><%= @user.profile.company %></h3>
+				<h4><%= @user.profile.location %></h4>
+				<h4><%= @user.profile.phone_number %></h4>
+				<h4><%= @user.profile.email %></h4>
+			</div>
+		</div>		
+	</div>
+</div>

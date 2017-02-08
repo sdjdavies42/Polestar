@@ -18,6 +18,8 @@
 			<h1 id="main-header"><i class="fa fa-star-half-o"></i>Polestar <small>Overseas Military Car-Finder</small></h1>
 			<h4 id="slogan">Guiding you to your next vehicle purchase.</h4>
 		</div>
+	
+	
 		<nav class="navbar navbar-default navbar-static-top" role="navigation">
 			<div class='container'>
 				<ul class="nav navbar-nav navbar-left">
@@ -46,11 +48,11 @@
 						<%= link_to "Log In", new_user_session_path, class: 'btn btn-md btn-success navbar-btn' %>
 					<% end %>
 				</ul>
-				
+					
 			</div>
 		</nav>
 	</div>
-
+	
 	<div class="container flash-container">
 		<% flash.each do |type, msg| %>
   		<%= content_tag :div, msg, class: "alert alert-#{type}" %>

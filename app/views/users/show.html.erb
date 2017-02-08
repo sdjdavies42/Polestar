@@ -1,5 +1,5 @@
 <% if user_signed_in? && @user.id == current_user.id %>
-	<div class="container">
+	<div class="container text-center">
 		<div class="row">
 			<div class="col-md-3">
 				<div class="well">
@@ -31,10 +31,6 @@
 				<h4>Email address</h4>
 				<div class="dealer-field">
 					<%= @user.profile.email %>
-				</div>
-				<h4>About <%= @user.profile.company %></h4>
-				<div class="dealer-field">
-					<%= @user.profile.about %>
 				</div>
 			</div>			
 		</div>
