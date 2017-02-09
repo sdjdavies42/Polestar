@@ -4,7 +4,6 @@ class CarsController < ApplicationController
 	def new
 		@user = User.find( params[:user_id] )
 		@car = @user.cars.build
-		respond_with(@car)
 	end
 
 	# POST request to /users/:user_id/cars
@@ -12,7 +11,7 @@ class CarsController < ApplicationController
 		@user = User.find( params[:user_id] )
 		@car = @user.cars.build( car_params )
 		if @car.save
-			redirect_to root_path
+			redirect_to user_path( params[:user_id] )
 		end
 	end
 
