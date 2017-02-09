@@ -1,6 +1,5 @@
 class CarsController < ApplicationController
-	respond_to :html, :xml, :json
-
+	
 	# GET request to /users/:user_id/cars/new
 	def new
 		@user = User.find( params[:user_id] )

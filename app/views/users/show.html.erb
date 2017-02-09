@@ -20,11 +20,26 @@
 				<div class="dealer-field">
 					<%= @user.profile.email %>
 				</div>
+				<h4>About <%= @user.profile.company %></h4>
+				<div class="dealer-field">
+					<%= @user.profile.about %>
+				</div>
 			</div>			
 		</div>
 		<div class="col-md-6">
 			<div class="well">
 				<h2 class="text-center dealer-name">Listings</h2>
+				<ul class="list-unstyled">
+					<% @cars.each do |car| %>
+						<li>							
+							<div>
+								<%= link_to user_car_path(user_id: current_user.id ) do %>
+									<h3><%= car.year %> <%= car.make %> <%= car.model %></h3>
+								<% end %>
+							</div>
+						</li>					
+					<% end %>
+				</ul>
 			</div>
 		</div>
 		
