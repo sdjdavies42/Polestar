@@ -1,7 +1,8 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-3">
-			<div class="well">
+			<div class="well car-title">
+				<h2 class="text-center">Specs</h2><br />
 				<h4>Bodystyle</h4>
 				<div class="dealer-field">
 					<%= @car.category %>
@@ -29,9 +30,9 @@
 		<div class="col-md-3">
 			<div class="well text-center">
 				<%= link_to @user do %>				
-					<%= image_tag @user.profile.avatar.url, class: 'user-index-avatar' %>
+					<%= image_tag @user.profile.avatar.url, class: 'user-index-avatar' %>				
+					<h3><%= @user.profile.company %></h3>
 				<% end %>
-				<h3><%= @user.profile.company %></h3>
 				<h4><%= @user.profile.location %></h4>
 				<h4><%= @user.profile.phone_number %></h4>
 				<h4><%= @user.profile.email %></h4>

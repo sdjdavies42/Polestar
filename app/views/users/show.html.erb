@@ -33,7 +33,7 @@
 					<% @cars.each do |car| %>
 						<li>							
 							<div>
-								<%= link_to user_car_path(user_id: current_user.id ) do %>
+								<%= link_to user_car_path(user_id: @user.id ) do %>
 									<h3><%= car.year %> <%= car.make %> <%= car.model %></h3>
 								<% end %>
 							</div>

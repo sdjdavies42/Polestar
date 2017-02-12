@@ -21,6 +21,10 @@ class CarsController < ApplicationController
 		@car = @user.cars.find( params[:id] )
 	end
 
+	def index 
+		@cars = Car.all
+	end
+
 	private
 		def car_params
 			params.require(:car).permit(:category, :year, :make, :model, :miles, :transmission, :price, :description)

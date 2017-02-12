@@ -5,14 +5,14 @@ Rails.application.routes.draw do
 
 	end
 
- root to: 'pages#home' 
- get 'about', to: 'pages#about'
- resources :contacts, only: :create
- get 'contact-us', to: 'contacts#new', as: 'new_contact'
-
+	root to: 'pages#home' 
+	get 'about', to: 'pages#about'
+	resources :contacts, only: :create
+	get 'contact-us', to: 'contacts#new', as: 'new_contact'
+	get 'cars' => 'cars#index', as: :cars
 	resources :users do
 		resource :profile
-		resources :cars
+		resources :cars, except: :index
 	end
 		
 end
