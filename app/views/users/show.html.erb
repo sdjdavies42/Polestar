@@ -26,33 +26,34 @@
 				</div>
 			</div>			
 		</div>
-		<div class="col-md-6">
-			<div class="well">
-				<h2 class="text-center dealer-name">Listings</h2>
-				<ul class="list-unstyled">
-					<% @cars.each do |car| %>
-						<li>							
-							<div>
-								<%= link_to user_car_path(user_id: @user.id ) do %>
+		
+		<div class="col-md-6">			
+			<ul class="list-unstyled">
+				<% @cars.each do |car| %>
+					<li>
+						<div class="well row <%= cycle('', 'white-bg')  %>">
+							<div class="col-sm-4 text-center">
+							<!-- thumbnail for car here -->
+							</div>														
+							<div class="text-center">	
+								<%= link_to car_path(@car.id) do %>
 									<h3><%= car.year %> <%= car.make %> <%= car.model %></h3>
 								<% end %>
+								<h4><%= car.price %></h4>												
 							</div>
-						</li>					
-					<% end %>
-				</ul>
-			</div>
+						</div>
+					</li>					
+				<% end %>
+			</ul>
 		</div>
-		
 
 		<% if user_signed_in? && @user.id == current_user.id %>
-			<div class="row text-center">
-				<div class="col-md-3">
-					<div class="well">
-						<h3 class="dealer-name">Options</h3>
-						<%= link_to "Add New Listing", new_user_car_path(user_id: current_user.id ), class: 'btn btn-lg btn-success btn-block' %>
-						<%= link_to "Update Your Page", edit_user_profile_path(user_id: current_user.id), class: 'btn btn-lg btn-primary btn-block' %>
-						<%= link_to "Manage Your Account", edit_user_registration_path, class: 'btn btn-lg btn-warning btn-block' %>
-					</div>
+			<div class="col-md-3 text-center">
+				<div class="well">
+					<h3 class="dealer-name">Options</h3>
+					<%= link_to "Add New Listing", new_user_car_path(user_id: current_user.id ), class: 'btn btn-lg btn-success btn-block' %>
+					<%= link_to "Update Your Page", edit_user_profile_path(user_id: current_user.id), class: 'btn btn-lg btn-primary btn-block' %>
+					<%= link_to "Manage Your Account", edit_user_registration_path, class: 'btn btn-lg btn-warning btn-block' %>
 				</div>
 			</div>
 		<% end %>

@@ -15,13 +15,13 @@ class CarsController < ApplicationController
 		end
 	end
 
-	#GET request to /users/:user_id/cars/:id
 	def show
-		@user = User.find( params[:user_id]	)
-		@car = @user.cars.find( params[:id] )
+		@user = User.find( params[:id] )
+		@car = Car.find( params[:id] )
 	end
 
-	def index 
+	# GET request to /cars/
+	def index
 		@cars = Car.all
 	end
 

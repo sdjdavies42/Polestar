@@ -10,9 +10,10 @@ Rails.application.routes.draw do
 	resources :contacts, only: :create
 	get 'contact-us', to: 'contacts#new', as: 'new_contact'
 	get 'cars' => 'cars#index', as: :cars
+	resources :cars
 	resources :users do
 		resource :profile
-		resources :cars, except: :index
+		resources :cars, shallow: true
 	end
-		
+
 end
