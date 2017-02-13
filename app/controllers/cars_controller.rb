@@ -16,8 +16,9 @@ class CarsController < ApplicationController
 	end
 
 	def show
-		@user = User.find( params[:id] )
 		@car = Car.find( params[:id] )
+		@user = User.find( params[:id] )
+		@profile = @user.profile
 	end
 
 	# GET request to /cars/
