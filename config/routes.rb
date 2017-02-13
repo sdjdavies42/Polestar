@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 	resources :cars
 	resources :users do
 		resource :profile
-		resources :cars, shallow: true
+		resources :cars, shallow: true  
 	end
 
 end

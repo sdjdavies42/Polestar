@@ -29,7 +29,7 @@
 		</div>
 		<div class="col-md-3">
 			<div class="well text-center">
-				<%= link_to @user do %>				
+				<%= link_to @car.user do %>				
 					<%= image_tag @user.profile.avatar.url, class: 'user-index-avatar' %>				
 					<h3><%= @user.profile.company %></h3>
 				<% end %>
