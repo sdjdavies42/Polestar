@@ -36,7 +36,11 @@
 				<h4><%= @user.profile.location %></h4>
 				<h4><%= @user.profile.phone_number %></h4>
 				<h4><%= @user.profile.email %></h4>
+				<% if user_signed_in? && @user.id == current_user.id %>
+				<%= link_to "Edit Listing", edit_car_path(id: @car.id ), class: 'btn btn-lg btn-warning btn-block' %>
+				<% end %>
 			</div>
 		</div>		
 	</div>
 </div>
+
