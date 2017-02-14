@@ -1,5 +1,8 @@
 class CarsController < ApplicationController
-	
+
+	before_action :authenticate_user!, :except => [:index, :show]
+	before_action :only_current_user, :except => [:index, :show]
+
 	# GET request to /users/:user_id/cars/new
 	def new
 		@user = User.find( params[:user_id] )
@@ -43,4 +46,10 @@ class CarsController < ApplicationController
 		def car_params
 			params.require(:car).permit(:category, :year, :make, :model, :miles, :transmission, :price, :description)
 		end
+
+		def only_current_user
+			@car = Car.find( params[:id] )
+			@user = @car.user
+			redirect_to(root_url) unless @user == current_user
+		end	
 end
