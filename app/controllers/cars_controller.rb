@@ -15,6 +15,19 @@ class CarsController < ApplicationController
 		end
 	end
 
+	# GET request to /cars/:id/edit
+	def edit
+		@car = Car.find( params[:id] )
+	end
+
+	# PATCH request to /cars/:id
+	def update
+		@car = Car.find( params[:id] )
+		if @car.update_attributes( car_params )
+			redirect_to car_path( params[:id] )
+		end
+	end
+
 	def show
 		@car = Car.find( params[:id] )
 		@user = @car.user
