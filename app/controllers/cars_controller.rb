@@ -1,12 +1,12 @@
 class CarsController < ApplicationController
 
 	before_action :authenticate_user!, :except => [:index, :show]
-	before_action :only_current_user, :except => [:index, :show]
+	before_action :only_current_user, :except => [:index, :show, :new, :create]
 
 	# GET request to /users/:user_id/cars/new
 	def new
+		@car = Car.new
 		@user = User.find( params[:user_id] )
-		@car = @user.cars.build
 	end
 
 	# POST request to /users/:user_id/cars
