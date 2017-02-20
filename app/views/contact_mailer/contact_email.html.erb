@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html>
-	<head>
-	</head>
-	<body>
-		<p>You have received a message from the site's contact form from: <br />
-		<%= "#{ @name }, #{ @email }, #{@phone}". %></p>
-		<p><%= @body %></p>
-	</body>
+  <body>
+    <p>You have received a message from the site's contact form, from <%= "#{ @name }, #{ @phone } #{ @email }." %></p>
+    <p><%= @body %></p>
+  </body>    
 </html>
