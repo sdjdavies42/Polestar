@@ -25,6 +25,7 @@
 			<div class="well car-title">
 				<h1 class="text-center"><%= @car.year %> <%= @car.make %> <%= @car.model%></h1>
 				<h3 class="text-center"><%= @car.price %></h3>
+				<%= image_tag @car.image.url(:medium) %>
 			</div>
 		</div>
 		<div class="col-md-3">
