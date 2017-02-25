@@ -5,11 +5,15 @@
 				<% @cars.each do |car| %>					
 					<li>
 						<div class="well row <%= cycle('', 'white-bg')  %>">
-							<div class="col-sm-4 text-center">
+							<div class="col-sm-4">
 								<% if car.image %>
-									<%= image_tag car.image.url(:medium) %>
+									<%= link_to car do %>
+										<%= image_tag car.image.url(:medium), class: 'car-index-image' %>
+									<% end %>
 								<% end %>
 							</div>
+							<br />
+							<br />
 							<div class="pull-left">
 								<%= link_to car do %>
 									<h3><%= car.year %> <%=car.make %> <%= car.model %></h3>
