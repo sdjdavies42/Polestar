@@ -6,7 +6,9 @@
 					<li>
 						<div class="well row <%= cycle('', 'white-bg')  %>">
 							<div class="col-sm-4 text-center">
-								<!-- thumbnail for car here -->
+								<% if car.image %>
+									<%= image_tag car.image.url(:medium) %>
+								<% end %>
 							</div>
 							<div class="pull-left">
 								<%= link_to car do %>
