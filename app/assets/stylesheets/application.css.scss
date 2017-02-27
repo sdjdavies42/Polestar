@@ -4,6 +4,7 @@
 @import "font-awesome";
 
 html {
+	position: relative;
 	height: 100%;
 }
 
@@ -13,6 +14,7 @@ body {
 	background: url('/cars.jpg');
 	background-color: rgb(242, 242, 242);
 	background-size: cover;
+	margin-bottom: -20px;
 }
 
 h1, h2, h3, h4 {
@@ -20,8 +22,9 @@ h1, h2, h3, h4 {
 }
 
 footer {
+	height: 20px;
 	width: 100%;
-	position: static;
+	position: absolute;
 	bottom: 0;
 	background-color: rgb(242, 242, 242);
 }
