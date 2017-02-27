@@ -3,8 +3,16 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+html {
+	height: 100%;
+}
+
 body {
 	position: relative;
+	min-height: 100%;
+	background: url('/cars.jpg');
+	background-color: rgb(242, 242, 242);
+	background-size: cover;
 }
 
 h1, h2, h3, h4 {
@@ -13,8 +21,8 @@ h1, h2, h3, h4 {
 
 footer {
 	width: 100%;
-	position: fixed;
-	bottom: 0;	
+	position: static;
+	bottom: 0;
 	background-color: rgb(242, 242, 242);
 }
 
@@ -30,7 +38,7 @@ footer {
 	padding-left: 10px;
 }
 
-//Layout
+// Layout
 #main-header {
 	color: white;
 }
@@ -80,11 +88,6 @@ footer {
 	border: 1px solid gray;
 }
 
-#home-background {
-	background: url('/cars.jpg') no-repeat;
-	background-size: cover;
-}
-
 .well {
 	margin-top: 20px;
 	background-color: rgb(225, 229, 237);
@@ -124,9 +127,16 @@ footer {
 }
 
 // Car show page
-.car-title {
-	padding-top: 0;
+.car-img {
+	display: block;
+	max-width: 500px;
+	max-height: 450px;
+	margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+  border: 1px solid gray;
 }
+
 
 // Car index
 .car-index-image {
