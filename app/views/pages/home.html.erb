@@ -16,19 +16,27 @@
 				and search countless individual dealership sites.</p>
 			<div class="row">
 				<div class="col-md-3 text-center">
-					<%= image_tag @car1.image.url(:medium), class: 'homepage-car-img' %>
+					<%= link_to @car1 do %>
+						<%= image_tag @car1.image.url(:medium), class: 'homepage-car-img' %>
+					<% end %>
 				</div>
 
 				<div class="col-md-3 text-center">
-					<%= image_tag @car2.image.url(:medium), class: 'homepage-car-img' %>
+					<%= link_to @car2 do %>
+						<%= image_tag @car2.image.url(:medium), class: 'homepage-car-img' %>
+					<% end %>
 				</div>
 
 				<div class="col-md-3 text-center">
-					<%= image_tag @car3.image.url(:medium), class: 'homepage-car-img' %>
+					<%= link_to @car3 do %>
+						<%= image_tag @car3.image.url(:medium), class: 'homepage-car-img' %>
+					<% end %>
 				</div>
 
 				<div class="col-md-3 text-center">
-					<%= image_tag @car4.image.url(:medium), class: 'homepage-car-img' %>
+					<%= link_to @car4 do %>
+						<%= image_tag @car4.image.url(:medium), class: 'homepage-car-img' %>
+					<% end %>
 				</div>
 			</div>
 			<br />
