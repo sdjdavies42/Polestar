@@ -11,6 +11,8 @@
 		<%= javascript_include_tag "https://js.stripe.com/v2/", type: 'text/javascript' %>
 		<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 		<%= tag :meta, :name => "stripe-key", :content => STRIPE_PUBLIC_KEY %>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</head>
 <body>
 	<div class="page-header">
@@ -18,36 +20,42 @@
 			<h1 id="main-header"><i class="fa fa-star-half-o"></i>Polestar <small>Overseas Military Car-Finder</small></h1>
 			<h4 id="slogan">Guiding you to your next vehicle purchase.</h4>
 		</div>
-	
-	
+		
 		<nav class="navbar navbar-default navbar-static-top" role="navigation">
 			<div class='container'>
-				<ul class="nav navbar-nav navbar-left">
-					<li><%= link_to "Home", root_path %></li>
-					<li><%= link_to "Vehicles", cars_path %></li>
-					<li><%= link_to "Dealerships", users_path %></li>
-					<li><%= link_to "Contact Us", new_contact_path %></li>
-					<li><%= link_to "About", about_path %></li>
-				</ul>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-left">
+						<li><%= link_to "Home", root_path %></li>
+						<li><%= link_to "Vehicles", cars_path %></li>
+						<li><%= link_to "Dealerships", users_path %></li>
+						<li><%= link_to "Contact Us", new_contact_path %></li>
+						<li><%= link_to "About", about_path %></li>
+					</ul>
 
-				<ul class="nav navbar-nav navbar-right">
-					<% if user_signed_in? %>
+					<ul class="nav navbar-nav navbar-right">
+						<% if user_signed_in? %>
 
-						<% if current_user.profile %>
-							<li><%= link_to "Your Page", user_path(id: current_user.id) %></li>
-						<% end %>
-						<% if !current_user.profile %>
-							<%= link_to "Create Your Dealership Page", new_user_profile_path(user_id: current_user.id), class: 'btn btn-md btn-success navbar-btn' %>
+							<% if current_user.profile %>
+								<li><%= link_to "Your Page", user_path(id: current_user.id) %></li>
 							<% end %>
-						<% end %>
+							<% if !current_user.profile %>
+								<%= link_to "Create Your Dealership Page", new_user_profile_path(user_id: current_user.id), class: 'btn btn-md btn-success navbar-btn' %>
+								<% end %>
+							<% end %>
 
-					<% if user_signed_in? %>
-						<%= link_to "Log Out", destroy_user_session_path, :method => :delete, class: 'btn btn-md btn-danger navbar-btn' %>
-					<% else %>
-						<%= link_to "Log In", new_user_session_path, class: 'btn btn-md btn-success navbar-btn' %>
-					<% end %>
-				</ul>
-					
+						<% if user_signed_in? %>
+							<%= link_to "Log Out", destroy_user_session_path, :method => :delete, class: 'btn btn-md btn-danger navbar-btn' %>
+						<% else %>
+							<%= link_to "Log In", new_user_session_path, class: 'btn btn-md btn-success navbar-btn' %>
+						<% end %>
+					</ul>
+				</div>	
 			</div>
 		</nav>
 	</div>
