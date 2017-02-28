@@ -8,14 +8,34 @@
 		</div>
 	<% end %>	
 	<div class="row">		
-		<div class="well inventory-well">
+		<div class="well inventory-well homepage-well">
 			<h2 class="text-center">Shopping for a new vehicle?</h2>
 			<p>Polestar exists to make your life easier. All overseas military car dealerships can 
 				list their vehicles on one easy-to-navigate site, so you'll no longer have
 				to kick tires on lemon lots, sift though endless Facebook pages
 				and search countless individual dealership sites.</p>
-			<h4 class="text-center">Follow the link below to see what's out there. It's free!</h4>
-			<%= link_to "View All Vehicles", cars_path, class: "btn btn-success btn-lg btn-block" %>
+			<div class="row">
+				<div class="col-md-3 text-center">
+					<%= image_tag @car1.image.url(:medium), class: 'homepage-car-img' %>
+				</div>
+
+				<div class="col-md-3 text-center">
+					<%= image_tag @car2.image.url(:medium), class: 'homepage-car-img' %>
+				</div>
+
+				<div class="col-md-3 text-center">
+					<%= image_tag @car3.image.url(:medium), class: 'homepage-car-img' %>
+				</div>
+
+				<div class="col-md-3 text-center">
+					<%= image_tag @car4.image.url(:medium), class: 'homepage-car-img' %>
+				</div>
+			</div>
+			<br />
+			<div class="row">
+				<h4 class="text-center">Follow the link below to see what's out there. It's free!</h4>
+				<%= link_to "View All Vehicles", cars_path, class: "btn btn-success btn-lg btn-block" %>
+			</div>
 		</div>
 	</div>	
 </div>
