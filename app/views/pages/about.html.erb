@@ -6,7 +6,8 @@
 			<br />
 			<p class="about-page">Polestar Overseas Military Car-Finder was created in order to make life easier for all military personnel stationed overseas. We know trying to find the right vehicle in a new country can be stressful, so we are here to guide you through it!</p>
 			<p class="about-page">Polestar is a hub for different dealerships to show off what they have available all in one place, so that you no longer have to sift through countless individual sites and an endless number of pages on social media. Here, you can see an un-biased, hassle-free, spam-free list of what's around and we let the vehicles do the talking.</p>
-
+			<br />
+			<br />
 			<% if !user_signed_in? %>
 				<h4 class="text-center">Do you own/work at a military car sales company? Create a Polestar Dealership Account to start listing your vehicles:</h4>
 				<%= link_to "Sign Up!", new_user_registration_path(plan: @dealer_plan), class: "btn btn-danger btn-block" %>

@@ -31,6 +31,12 @@ class CarsController < ApplicationController
 		end
 	end
 
+	def destroy
+		@car = Car.find( params[:id] )
+		@car.destroy
+		redirect_to(root_url)
+	end
+
 	def show
 		@car = Car.find( params[:id] )
 		@user = @car.user

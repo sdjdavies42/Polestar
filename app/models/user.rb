@@ -5,8 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   belongs_to :plan
-  has_one :profile
-  has_many :cars
+  has_one :profile, :dependent => :destroy
+  has_many :cars, :dependent => :destroy
 
   attr_accessor :stripe_card_token
 
