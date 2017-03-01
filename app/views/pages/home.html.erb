@@ -11,31 +11,35 @@
 				to kick tires on lemon lots, sift though endless Facebook pages
 				and search countless individual dealership sites.</p>
 			<br />
-			<!--
 			<div class="row">
-				<div class="col-md-3 text-center">
-					<%= link_to @car1 do %>
-						<%= image_tag @car1.image.url(:medium), class: 'homepage-car-img' %>
-					<% end %>
-				</div>
-
-				<div class="col-md-3 text-center">
-					<%= link_to @car2 do %>
-						<%= image_tag @car2.image.url(:medium), class: 'homepage-car-img' %>
-					<% end %>
-				</div>
-
-				<div class="col-md-3 text-center">
-					<%= link_to @car3 do %>
-						<%= image_tag @car3.image.url(:medium), class: 'homepage-car-img' %>
-					<% end %>
-				</div>
-
-				<div class="col-md-3 text-center">
-					<%= link_to @car4 do %>
-						<%= image_tag @car4.image.url(:medium), class: 'homepage-car-img' %>
-					<% end %>
-				</div>
+				<% if @car1.image %>
+					<div class="col-md-3 text-center">
+						<%= link_to @car1 do %>
+							<%= image_tag @car1.image.url(:medium), class: 'homepage-car-img' %>
+						<% end %>
+					</div>
+				<% end %>
+				<% if @car2.image %>
+					<div class="col-md-3 text-center">
+						<%= link_to @car2 do %>
+							<%= image_tag @car2.image.url(:medium), class: 'homepage-car-img' %>
+						<% end %>
+					</div>
+				<% end %>
+				<% if @car3.image %>
+					<div class="col-md-3 text-center">
+						<%= link_to @car3 do %>
+							<%= image_tag @car3.image.url(:medium), class: 'homepage-car-img' %>
+						<% end %>
+					</div>
+				<% end %>
+				<% if @car4.image %>
+					<div class="col-md-3 text-center">
+						<%= link_to @car4 do %>
+							<%= image_tag @car4.image.url(:medium), class: 'homepage-car-img' %>
+						<% end %>
+					</div>
+				<% end %>
 			</div>
 			<br />
 			<div class="row">
