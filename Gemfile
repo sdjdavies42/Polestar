@@ -27,7 +27,7 @@ gem 'figaro', '1.1.1'
 gem 'paperclip', '4.3.6'
 
 # Use Amazon S3 for image storage
-gem 'aws-sdk', '~> 2.7.3'
+gem 'aws-sdk', '< 2.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
