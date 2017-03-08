@@ -48,7 +48,7 @@ class CarsController < ApplicationController
 
 	# GET request to /cars/
 	def index
-		@cars = Car.all
+		@cars = Car.paginate(:page => params[:page], :per_page => 3)
 	end
 
 	private
