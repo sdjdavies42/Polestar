@@ -29,9 +29,11 @@ gem 'paperclip', '4.3.6'
 # Use Amazon S3 for image storage
 gem 'aws-sdk', '< 2.0'
 
+# Use will_paginate to limit posts per page in indexes
+gem 'will_paginate', '~> 3.1.0'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
-
 
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
