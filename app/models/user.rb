@@ -4,15 +4,15 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  def dealer_location
+    "#{profile.location}"
+  end
+
   belongs_to :plan
   has_one :profile, :dependent => :destroy
   has_many :cars, :dependent => :destroy
 
   attr_accessor :stripe_card_token
-
-  def dealer_location
-    "#{profile.location}"
-  end
 
   def save_with_subscription
   	if valid?

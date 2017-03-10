@@ -32,6 +32,9 @@ gem 'aws-sdk', '< 2.0'
 # Use will_paginate to limit posts per page in indexes
 gem 'will_paginate', '~> 3.1.0'
 
+# Use Filterrific to query DB
+gem 'filterrific'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
 
