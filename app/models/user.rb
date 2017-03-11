@@ -4,13 +4,13 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  def dealer_location
-    "#{profile.location}"
-  end
-
   belongs_to :plan
   has_one :profile, :dependent => :destroy
   has_many :cars, :dependent => :destroy
+
+  def dealer_location
+    "#{profile.location}"
+  end
 
   attr_accessor :stripe_card_token
 

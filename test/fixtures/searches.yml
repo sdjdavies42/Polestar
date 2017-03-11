@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  keywords: MyString
+  make: MyString
+  model: MyString
+  transmission: MyString
+
+two:
+  keywords: MyString
+  make: MyString
+  model: MyString
+  transmission: MyString

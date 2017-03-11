@@ -1,17 +1,16 @@
 <div class="container">
 	<div class="row">
-		<div class="col-md-6 col-md-offset-3">
-			<%= form_tag cars_path, :method => 'get' do %>
-				<%= text_field_tag :search, params[:search], placeholder: 'Search by Manufacturer', class: 'form-control' %>
-				<%= submit_tag "Search", class: 'btn btn-md btn-primary' %>
-				<%= link_to "Advanced Search", new_search_path, class: 'btn btn-md btn-danger pull-right' %>
-			<% end %>
-		</div>
-	</div>
-	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
 			<ul class="list-unstyled">
-				<% @cars.each do |car| %>					
+				
+				<% if @search.search_cars.empty? %>
+					
+					<h2 class="text-center">No Records Found</h4>
+
+				<% else %>
+
+				<% @search.search_cars.each do |car| %>
+
 					<li>
 						<div class="well row <%= cycle('', 'white-bg')  %>">
 							<div class="col-sm-4">
@@ -32,14 +31,11 @@
 								<h3 class="pull-right"><%= car.price %></h3>
 							</div>
 						</div>
-					</li>					
+					</li>
+
 				<% end %>
+
 			</ul>
 		</div>
-	</div>
-</div>
-<div class="row">
-	<div class="well pages-well">
-		<%= will_paginate @cars, class: 'text-center' %>
 	</div>
 </div>

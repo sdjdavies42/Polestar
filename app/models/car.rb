@@ -26,4 +26,12 @@ class Car < ActiveRecord::Base
 										
 	validates_attachment_content_type :image5, content_type: /\Aimage\/.*\z/
 
+	def self.search(search)
+		if search
+			where(["make like ?", "%#{search}%"])
+		else
+			all
+		end
+	end
+
 end
