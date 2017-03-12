@@ -5,14 +5,14 @@
 		<h4 class="text-center">Create a Polestar Dealership Account to start listing your vehicles: 
 		<%= link_to "Sign Up!", new_user_registration_path(plan: @dealer_plan), class: "btn btn-danger btn-md" %></h4>
 	</div>
-<% end %>	
+<% end %>
+
 <div class="container">
 	<div class="row">		
 		<div class="well inventory-well">
 			<h1 class="text-center">Shopping for a new vehicle?</h1>
 			<br />
-			<p class="about-page">Polestar exists to make your life easier. All overseas military car dealerships can list their vehicles on one easy-to-navigate site. Now you'll no longer have to kick tires on lemon lots, scroll though endless Facebook pages or search countless individual dealership sites to find your next vehicle:</p> 
-			<h4 class="text-center">Let Polestar guide you!</h4>
+			<p class="about-page">Polestar exists to make your life easier. All overseas military car dealerships can list their vehicles on one easy-to-navigate site. Now you'll no longer have to kick tires on lemon lots, scroll though endless Facebook pages or search countless individual dealership sites to find your next vehicle: <h3 class="text-center"><%= link_to "Let Polestar guide you!", cars_path %></h4></p>
 			<br />
 			<h4>Featured Vehicles:</h4>
 			<div class="row">
@@ -56,10 +56,4 @@
 			<br />
 		</div>
 	</div>
-	<div class="row">		
-		<div class="well inventory-well homepage-well">
-			<h4 class="text-center">Follow the link below to see what's out there. It's free!</h4>
-			<%= link_to "View All Vehicles", cars_path, class: "btn btn-success btn-lg btn-block" %>
-		</div>
-	</div>	
 </div>
