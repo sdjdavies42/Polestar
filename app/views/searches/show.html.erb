@@ -5,35 +5,41 @@
 				
 				<% if @search.search_cars.empty? %>
 					
-					<h2 class="text-center">No Records Found</h4>
-
+					<div class="well">
+						<h2 class="text-center">No Records Found</h4>
+					</div>
+					
 				<% else %>
 
-				<% @search.search_cars.each do |car| %>
+					<% @search.search_cars.each do |car| %>
 
-					<li>
-						<div class="well row <%= cycle('', 'white-bg')  %>">
-							<div class="col-sm-4">
-								<% if car.image %>
-									<%= link_to car do %>
-										<%= image_tag car.image.url(:medium), class: 'car-index-image' %>
+						<li>
+							<div class="well row <%= cycle('', 'white-bg')  %>">
+								<div class="col-sm-4">
+									<% if car.image %>
+										<%= link_to car do %>
+											<%= image_tag car.image.url(:medium), class: 'car-index-image' %>
+										<% end %>
 									<% end %>
-								<% end %>
+								</div>
+								<br />
+								<br />
+								<div class="pull-left">
+									<%= link_to car do %>
+										<h3><%= car.year %> <%=car.make %> <%= car.model %></h3>
+									<% end %>
+								</div>
+								<div>
+									<h3 class="pull-right"><%= car.price %></h3>
+								</div>
 							</div>
-							<br />
-							<br />
-							<div class="pull-left">
-								<%= link_to car do %>
-									<h3><%= car.year %> <%=car.make %> <%= car.model %></h3>
-								<% end %>
-							</div>
-							<div>
-								<h3 class="pull-right"><%= car.price %></h3>
-							</div>
-						</div>
-					</li>
+						</li>
+
+					<% end %>
 
 				<% end %>
+
+				<h4 class="text-center"><%= link_to 'Back', cars_path, class: 'btn btn-md btn-default' %></h4>
 
 			</ul>
 		</div>

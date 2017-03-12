@@ -4,7 +4,7 @@
 			<%= form_tag cars_path, :method => 'get' do %>
 				<%= text_field_tag :search, params[:search], placeholder: 'Search by Manufacturer', class: 'form-control' %>
 				<%= submit_tag "Search", class: 'btn btn-md btn-primary' %>
-				<%= link_to "Advanced Search", new_search_path, class: 'btn btn-md btn-danger pull-right' %>
+				<%= link_to "Advanced Search", new_search_path, class: 'btn btn-md btn-default btn-advanced-search pull-right' %>
 			<% end %>
 		</div>
 	</div>
