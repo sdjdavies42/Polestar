@@ -2,7 +2,7 @@
 <!-- Show sign up button if user isn't signed in -->
 <% if !user_signed_in? %>
 	<div class="homepage-signup">	
-		<h4 class="text-center">Do you own/work at a military car sales company? <br />Create a Polestar Dealership Account to start listing your vehicles: 
+		<h4 class="text-center">Create a Polestar Dealership Account to start listing your vehicles: 
 		<%= link_to "Sign Up!", new_user_registration_path(plan: @dealer_plan), class: "btn btn-danger btn-md" %></h4>
 	</div>
 <% end %>	

@@ -8,10 +8,15 @@ class User < ApplicationRecord
   has_one :profile, :dependent => :destroy
   has_many :cars, :dependent => :destroy
 
-  def dealer_location
-    "#{profile.location}"
+  def self.search(search)
+    if search
+      joins(:profile).where("location LIKE ?", "%#{search}%")
+    else
+      all
+    end
   end
 
+  # From Stripe docs
   attr_accessor :stripe_card_token
 
   def save_with_subscription
