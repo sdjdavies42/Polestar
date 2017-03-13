@@ -12,4 +12,8 @@ class PagesController < ApplicationController
 		@dealer_plan = Plan.find(1)
 	end
 
+	def rules
+
+	end
+	
 end

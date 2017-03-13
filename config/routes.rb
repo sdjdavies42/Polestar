@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
 	root to: 'pages#home' 
 	get 'about', to: 'pages#about'
+	get 'rules', to: 'pages#rules'
 	resources :contacts, only: :create
 	get 'contact-us', to: 'contacts#new', as: 'new_contact'
 	get 'cars' => 'cars#index', as: :cars
