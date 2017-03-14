@@ -52,6 +52,7 @@ class CarsController < ApplicationController
 	end
 
 	private
+
 		def car_params
 			params.require(:car).permit(:category, :year, :make, :model, :miles, :transmission, :price, :description, :image, :image2, :image3, :image4, :image5)
 		end
@@ -68,4 +69,5 @@ class CarsController < ApplicationController
 			@user = User.find( params[:user_id] )
 			redirect_to(root_url) unless @user == current_user
 		end
+		
 end

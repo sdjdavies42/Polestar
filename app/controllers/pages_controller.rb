@@ -13,7 +13,7 @@ class PagesController < ApplicationController
 	end
 
 	def rules
-
+		redirect_to(root_url) unless user_signed_in?
 	end
 	
 end
