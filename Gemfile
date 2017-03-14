@@ -14,6 +14,9 @@ gem 'font-awesome-sass'
 # Use Devise for user authentication
 gem 'devise', '4.2.0'
 
+# Use CanCanCan to give user(s) admin abilities
+gem 'cancancan'
+
 # Use Hirb for better console presentation
 gem 'hirb', '0.7.3'
 
