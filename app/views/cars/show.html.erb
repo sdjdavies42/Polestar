@@ -55,7 +55,7 @@
 				<h4><%= @user.profile.phone_number %></h4>
 				<h4><%= @user.profile.email %></h4>
 
-				<% if user_signed_in? && @user.id == current_user.id %>
+				<% if user_signed_in? && @user.id == current_user.id || 4 %>
 					<%= link_to "Edit Listing", edit_car_path(id: @car.id ), class: 'btn btn-lg btn-warning btn-block' %>
 					<%= link_to "Delete Listing", car_path(id: @car.id), :data => {:confirm => "Are you sure?"}, :method => :delete, class: 'btn btn-lg btn-danger btn-block' %>
 				<% end %>
